@@ -1,0 +1,26 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Assign Role";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Assign Role</h2>
+    <div class="card border-0 shadow-sm mx-auto" style="max-width: 400px;">
+        <div class="card-body p-4">
+            <form asp-action="AssignRole" method="post">
+                <div class="form-group mb-3">
+                    <label for="userId" class="form-label text-muted">User ID</label>
+                    <input type="text" id="userId" name="userId" class="form-control border-dark" required />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="roleName" class="form-label text-muted">Role Name</label>
+                    <input type="text" id="roleName" name="roleName" class="form-control border-dark" required />
+                </div>
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary btn-block">Assign</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Register";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Register</h2>
+    <div class="card border-0 shadow-sm mx-auto" style="max-width: 400px;">
+        <div class="card-body p-4">
+            <form asp-action="Register" method="post">
+                <div class="form-group mb-3">
+                    <label for="email" class="form-label text-muted">Email</label>
+                    <input type="email" id="email" name="email" class="form-control border-dark" required />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="password" class="form-label text-muted">Password</label>
+                    <input type="password" id="password" name="password" class="form-control border-dark" required />
+                </div>
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

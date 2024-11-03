@@ -1,0 +1,27 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Delete User";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center text-dark">Delete User</h2>
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+            <form asp-controller="Users" asp-action="Delete" method="post">
+                <div class="form-group mb-3">
+                    <label for="Id" class="form-label text-muted">User ID</label>
+                    <input for="Id" class="form-control border-dark" placeholder="Enter user ID" />
+                    <span validation-for="Id" class="text-danger"></span>
+                </div>
+                <div class="d-flex justify-content-end mt-4">
+                    <button type="submit" class="btn btn-danger me-2 px-4">Delete</button>
+                    <a asp-action="Index" class="btn btn-outline-secondary px-4">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
